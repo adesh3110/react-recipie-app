@@ -10,6 +10,9 @@ function HomePage() {
       <HeroSection />
       <SectionOne />
       <SectionTwo />
+      <SectionOne />
+      <SectionTwo />
+      <SectionOne />
     </Box>
   );
 }

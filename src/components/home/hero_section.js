@@ -1,36 +1,44 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { Box } from '@mui/system';
+import { Container, Typography } from '@mui/material';
 
 function HeroSection() {
   return (
     <Box
-      height='30vh'
+      py={16}
       style={{
-        backgroundColor: '#c1c1c1',
+        backgroundColor: '#b041c3',
       }}
     >
-      <h2 className='text-white text-4xl font-bold animate__animated animate__zoomIn'>
-        Make Delicious :{' '}
-        <TypeAnimation
-          sequence={[
-            'BreakFast',
-            1000,
-            'Lunch',
-            2000,
-            'Dinner',
-            3000,
+      <Container>
+        <Typography
+          variant='h1'
+          component='h2'
+          color='white'
+          className='animate__animated animate__zoomIn'
+        >
+          Make Delicious :{' '}
+          <TypeAnimation
+            sequence={[
+              'BreakFast',
+              1000,
+              'Lunch',
+              2000,
+              'Dinner',
+              3000,
 
-            () => {
-              console.log('Sequence completed');
-            },
-          ]}
-          wrapper='span'
-          cursor={true}
-          repeat={Infinity}
-          className=''
-        />
-      </h2>
+              () => {
+                console.log('Sequence completed');
+              },
+            ]}
+            wrapper='span'
+            cursor={true}
+            repeat={Infinity}
+            className=''
+          />
+        </Typography>
+      </Container>
     </Box>
   );
 }
