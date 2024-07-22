@@ -16,7 +16,7 @@ function MainLayout() {
         <Box sx={{ flexGrow: 1 }}>
           <AppBar position='static'>
             <Container>
-              <Toolbar style={{ paddingRight: '20px' }}>
+              <Toolbar style={{ paddingLeft: '10px' }}>
                 <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
                   Recipie App
                 </Typography>
@@ -29,13 +29,21 @@ function MainLayout() {
                 </Link>
                 <Link
                   to={'/random-recipie'}
-                  style={{ textDecoration: 'none' }}
+                  reloadDocument={true}
+                  style={{ textDecoration: 'none', paddingRight: '20px' }}
                   color='white'
                 >
                   RANDOM
                 </Link>
 
-                <Button color='inherit'>Area</Button>
+                <Link
+                  to={'/search/area'}
+                  reloadDocument={true}
+                  style={{ textDecoration: 'none', paddingRight: '20px' }}
+                  color='white'
+                >
+                  AREA
+                </Link>
                 <Button color='inherit'>Category</Button>
                 <Button color='inherit'>Login</Button>
                 <Button color='inherit'>Register</Button>

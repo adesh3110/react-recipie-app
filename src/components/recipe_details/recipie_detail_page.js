@@ -1,4 +1,4 @@
-import { Box, Container, Paper, Typography } from '@mui/material';
+import { Box, Container, Paper, Skeleton, Typography } from '@mui/material';
 import React from 'react';
 import IngredientTable from './ingrident_table';
 
@@ -32,7 +32,6 @@ function RecipieDetaidCard({ data }) {
               borderRadius: '8px',
             }}
           />
-
           <Typography variant='h4' component='h2' py={2}>
             {data.strMeal}
           </Typography>
