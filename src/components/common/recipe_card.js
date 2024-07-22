@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Paper, Typography } from '@mui/material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function RecipeCard({ meal }) {
   return (
@@ -26,7 +27,9 @@ function RecipeCard({ meal }) {
           <Typography component='h3' mb={1}>
             {meal.strInstructions.substring(0, 256)}...
           </Typography>
-          <Button variant='contained'>Give me Recipe</Button>
+          <Link to={`/recipe/${meal['idMeal']}`}>
+            <Button variant='contained'>Give me Recipe</Button>
+          </Link>
         </Grid>
       </Grid>
     </Box>

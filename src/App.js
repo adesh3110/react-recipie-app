@@ -3,6 +3,7 @@ import MainLayout from './layouts/main_layout';
 import HomePage from './pages/Home';
 import RandomRecipie from './pages/RandomRecipie';
 import SearchItem from './pages/SearchItem';
+import RecipieById from './pages/RecipieById';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path='/' element={<HomePage />} />
-          <Route path='/recipe/:id' element={<RandomRecipie />} />
+          <Route path='/recipe/:id' element={<RecipieById />} />
           <Route path='/random-recipie' element={<RandomRecipie />} />
           <Route path='/search' element={<SearchItem />} />
         </Route>
