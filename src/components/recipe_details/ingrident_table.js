@@ -17,7 +17,7 @@ function IngredientTable({ meal }) {
       const measureKey = `strMeasure${serial}`;
       const ingredient = meal[key];
       const measure = meal[measureKey];
-      if (ingredient == null || ingredient == '') return null;
+      if (ingredient === null || ingredient === '') return null;
       return { ingredient, measure };
     })
     .filter((value) => value);
