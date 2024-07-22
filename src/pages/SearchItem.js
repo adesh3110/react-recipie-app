@@ -1,3 +1,5 @@
+/* eslint-disable */
+ç;
 import { Box, Container } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';

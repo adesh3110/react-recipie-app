@@ -9,28 +9,12 @@ import {
   Typography,
 } from '@mui/material';
 import fetchRecipieSuggestion from '../../services/fetch_suggestion_recipie';
-import fetch_meal from '../../services/fetch_meal';
-import { Link, useNavigate, useRoutes } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function HeroSection() {
+  const navigation = useNavigate();
   const [suggestions, setSuggestions] = useState([]);
   const [input, setInput] = useState('');
-  const navigation = useNavigate();
-
-  const fetchSuggestion = async (input) => {
-    const mealsData = await fetchRecipieSuggestion(input);
-    setSuggestions(mealsData);
-  };
-
-  const onInputChange = (e) => {
-    const query = e.target.value;
-    setInput(query);
-  };
-
-  const onFormSubmit = (e) => {
-    e.preventDefault();
-    navigation(`/search?q=${input}`);
-  };
 
   useEffect(() => {
     let getData = setTimeout(() => {
@@ -38,6 +22,11 @@ function HeroSection() {
     }, 500);
     return () => clearInterval(getData);
   }, [input]);
+
+  const fetchSuggestion = async (input) => {
+    const mealsData = await fetchRecipieSuggestion(input);
+    setSuggestions(mealsData);
+  };
 
   return (
     <Box
@@ -65,26 +54,28 @@ function HeroSection() {
 
         <Box
           component='form'
-          onSubmit={onFormSubmit}
           noValidate
           autoComplete='off'
           className='flex m-4'
+          display='flex'
+          width='100%'
+          marginTop='10px'
         >
           <Autocomplete
             disablePortal
             id='combo-box-demo'
-            options={suggestions && suggestions.map((e) => e.strMeal)}
+            options={(suggestions ?? []).map((e) => e.strMeal)}
             value={input}
-            sx={{ width: 300 }}
-            onChange={(newValue) => {
-              if (newValue) {
-                setInput(newValue);
-              }
-            }}
-            onInputChange={(e) => onInputChange(e)}
+            sx={{ width: '70%' }}
+            onChange={(e, value) => setInput(value)}
+            onInputChange={(e, value) => setInput(value)}
             renderInput={(params) => <TextField {...params} label='Meal' />}
           />
-          <Button onClick={onFormSubmit} color='secondary'>
+          <Button
+            onClick={() => navigation(`/search?q=${input}`)}
+            color='secondary'
+            style={{ background: 'violet', width: '20%', marginLeft: '10px' }}
+          >
             Submit
           </Button>
         </Box>

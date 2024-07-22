@@ -17,6 +17,7 @@ function RecipeCard({ meal }) {
                 objectFit: 'cover',
                 borderRadius: '8px',
               }}
+              alt={meal.idMeal}
             />
           </Box>
         </Grid>

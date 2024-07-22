@@ -1,5 +1,4 @@
 import React from 'react';
-import img1 from '../../assets/diet.svg';
 import { Box } from '@mui/system';
 import { Container, Grid, Typography } from '@mui/material';
 
@@ -10,7 +9,7 @@ function SectionTwo() {
         <Grid container>
           <Grid
             item
-            md='7'
+            md={7}
             p={4}
             style={{
               background: '#C6E0FF',
@@ -26,7 +25,7 @@ function SectionTwo() {
 
           <Grid
             item
-            md='5'
+            md={5}
             style={{
               padding: '0px',
               margin: '0px',
@@ -41,6 +40,7 @@ function SectionTwo() {
                 width: '100%',
                 objectFit: 'cover',
               }}
+              alt='img2'
             />
           </Grid>
         </Grid>
