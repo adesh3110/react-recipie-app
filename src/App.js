@@ -15,7 +15,7 @@ function App() {
           <Route path='/recipe/:id' element={<RecipieById />} />
           <Route path='/random-recipie' element={<RandomRecipie />} />
           <Route path='/search' element={<SearchItem />} />
-          <Route path='/search/area' element={<SearchByArea />} />
+          <Route path='/area/:area' element={<SearchByArea />} />
         </Route>
       </Routes>
     </BrowserRouter>
