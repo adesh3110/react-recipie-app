@@ -5,6 +5,7 @@ import {
   Autocomplete,
   Button,
   Container,
+  Grid,
   TextField,
   Typography,
 } from '@mui/material';
@@ -52,56 +53,64 @@ function HeroSection() {
           />
         </Typography>
 
-        <Box
-          component='form'
-          noValidate
-          autoComplete='off'
-          className='flex m-4'
-          display='flex'
-          width='100%'
-          marginTop='10px'
-        >
-          <Autocomplete
-            disablePortal
-            id='combo-box-demo'
-            options={(suggestions ?? []).map((e) => e.strMeal)}
-            value={input}
-            onChange={(e, value) => setInput(value)}
-            onInputChange={(e, value) => setInput(value)}
-            sx={{
-              'width': '70%',
-              '& .MuiOutlinedInput-root': {
-                '& fieldset': {
-                  borderColor: 'white',
-                },
-                '&:hover fieldset': {
-                  borderColor: 'white',
-                },
-                '&.Mui-focused fieldset': {
-                  borderColor: 'white',
-                },
-              },
-              '& .MuiInputLabel-root': {
-                color: 'white',
-              },
-              '& .Mui-focused .MuiInputLabel-root': {
-                color: 'white',
-              },
-            }}
-            renderInput={(params) => <TextField {...params} label='Meal' />}
-          />
-          <Button
-            onClick={() => navigation(`/search?q=${input}`)}
-            color='secondary'
-            style={{
-              background: 'white',
-              width: '20%',
-              marginLeft: '10px',
-              color: '#1876d2',
-            }}
-          >
-            Submit
-          </Button>
+        <Box width='100%' marginTop='10px'>
+          <Grid container>
+            <Grid item xs={12} sm={8}>
+              <Autocomplete
+                disablePortal
+                id='combo-box-demo'
+                options={(suggestions ?? []).map((e) => e.strMeal)}
+                value={input}
+                onChange={(e, value) => setInput(value)}
+                onInputChange={(e, value) => setInput(value)}
+                sx={{
+                  'width': '100%',
+                  'color': 'white',
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'white',
+                      borderRadius: 0,
+                      color: 'white',
+                    },
+                    '&:hover fieldset': {
+                      borderColor: 'white',
+                      borderRadius: 0,
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: 'white',
+                      borderRadius: 0,
+                    },
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'white',
+                    borderRadius: 0,
+                  },
+                  '& .Mui-focused .MuiInputLabel-root': {
+                    color: 'white',
+                    borderRadius: 0,
+                  },
+                }}
+                variant='standard'
+                renderInput={(params) => <TextField {...params} label='Meal' />}
+              />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Button
+                onClick={() => navigation(`/search?q=${input}`)}
+                color='secondary'
+                style={{
+                  padding: '10px 0px',
+                  borderRadius: '0',
+                  background: 'white',
+                  width: '100%',
+                  height: '100%',
+                  color: '#1876d2',
+                }}
+              >
+                Seach
+              </Button>
+            </Grid>
+          </Grid>
         </Box>
       </Container>
     </Box>

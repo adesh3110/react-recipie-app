@@ -4,12 +4,7 @@ import IngredientTable from './ingrident_table';
 
 function RecipieDetaidCard({ data }) {
   return (
-    <Box
-      py={10}
-      style={{
-        background: '#efefef',
-      }}
-    >
+    <Box py={10}>
       <Container
         maxWidth='md'
         style={{ backgroundColor: '#fefefe', padding: '0px' }}
