@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 import fetch_meal from '../services/fetch_meal';
 import RecipeCard from '../components/common/recipe_card';
 
-function SearchItem() {
+function SearchResultPage() {
   const [meals, setMeals] = useState([]);
 
   const location = useLocation();
@@ -34,4 +34,4 @@ function SearchItem() {
   );
 }
 
-export default SearchItem;
+export default SearchResultPage;
