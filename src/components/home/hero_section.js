@@ -66,15 +66,39 @@ function HeroSection() {
             id='combo-box-demo'
             options={(suggestions ?? []).map((e) => e.strMeal)}
             value={input}
-            sx={{ width: '70%' }}
             onChange={(e, value) => setInput(value)}
             onInputChange={(e, value) => setInput(value)}
+            sx={{
+              'width': '70%',
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                  borderColor: 'white',
+                },
+                '&:hover fieldset': {
+                  borderColor: 'white',
+                },
+                '&.Mui-focused fieldset': {
+                  borderColor: 'white',
+                },
+              },
+              '& .MuiInputLabel-root': {
+                color: 'white',
+              },
+              '& .Mui-focused .MuiInputLabel-root': {
+                color: 'white',
+              },
+            }}
             renderInput={(params) => <TextField {...params} label='Meal' />}
           />
           <Button
             onClick={() => navigation(`/search?q=${input}`)}
             color='secondary'
-            style={{ background: 'violet', width: '20%', marginLeft: '10px' }}
+            style={{
+              background: 'white',
+              width: '20%',
+              marginLeft: '10px',
+              color: '#1876d2',
+            }}
           >
             Submit
           </Button>

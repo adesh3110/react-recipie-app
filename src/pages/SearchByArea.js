@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Container,
-  Grid,
-  Typography,
-} from '@mui/material';
+import { Container, Grid } from '@mui/material';
 import fetchRecipieByArea from '../services/fetch_recipie_by_area';
 import { useParams } from 'react-router-dom';
+import RecipieByArea from '../components/recipe_details/recipie_by_area';
 
 function SearchByArea() {
   const [recipiesByArea, setRecipiesByArea] = useState([]);
@@ -33,29 +25,7 @@ function SearchByArea() {
     >
       <Grid container rowSpacing={4} columnSpacing={4}>
         {recipiesByArea.map((e) => {
-          return (
-            <Grid item sm={12} md={6} width='100%'>
-              <Card>
-                <CardMedia
-                  sx={{ height: 240, width: '100%' }}
-                  image={e.strMealThumb}
-                  title='green iguana'
-                />
-                <CardContent
-                  style={{
-                    minHeight: '40px',
-                  }}
-                >
-                  <Typography gutterBottom variant='h5' component='div'>
-                    {e.strMeal}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size='small'>Give Me Recipie</Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          );
+          return <RecipieByArea e={e} />;
         })}
       </Grid>
     </Container>

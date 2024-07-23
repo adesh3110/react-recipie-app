@@ -36,6 +36,12 @@ function RecipieDetaidCard({ data }) {
             {data.strMeal}
           </Typography>
           <IngredientTable meal={data} />
+          <Typography variant='h5' my={2}>
+            Steps to make :{' '}
+          </Typography>
+          <Typography variant='body1' gutterBottom my={2}>
+            {data.strInstructions}
+          </Typography>
         </Paper>
       </Container>
     </Box>

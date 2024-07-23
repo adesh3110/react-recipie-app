@@ -1,30 +1,48 @@
-import { Box, Container, Grid } from '@mui/material';
 import React from 'react';
+import { Box, Container, Grid, Typography, Link } from '@mui/material';
 
-export default function Footer() {
+function Footer() {
   return (
-    <Box py={8}>
+    <Box py={8} style={{ backgroundColor: '#efefef' }}>
       <Container>
-        <Grid container>
-          <Grid lg={3} item spacing={2}>
-            <h3>Company</h3>
-            <a href='#'>About Us</a>
-            <a href='#'>Expansion Plan</a>
-            <a href='#'>Careers</a>
+        <Grid container spacing={2}>
+          <Grid item lg={3}>
+            <Typography variant='h6'>Company</Typography>
+            <Link href='#' display='block'>
+              About Us
+            </Link>
+            <Link href='#' display='block'>
+              Expansion Plan
+            </Link>
+            <Link href='#' display='block'>
+              Careers
+            </Link>
           </Grid>
-          <Grid lg={3} item spacing={2}>
-            <h4>Support</h4>
-            <a href='#'>FAQs</a>
-            <a href='#'>Email Us</a>
-            <a href='#'>Refund Policy</a>
+          <Grid item lg={3}>
+            <Typography variant='h6'>Support</Typography>
+            <Link href='#' display='block'>
+              FAQs
+            </Link>
+            <Link href='#' display='block'>
+              Email Us
+            </Link>
+            <Link href='#' display='block'>
+              Refund Policy
+            </Link>
           </Grid>
-          <Grid lg={3} item spacing={2}>
-            <h4>Partnerships</h4>
-            <a href='#'>Become a Partner</a>
-            <a href='#'>Check Status</a>
+          <Grid item lg={3}>
+            <Typography variant='h6'>Partnerships</Typography>
+            <Link href='#' display='block'>
+              Become a Partner
+            </Link>
+            <Link href='#' display='block'>
+              Check Status
+            </Link>
           </Grid>
         </Grid>
       </Container>
     </Box>
   );
 }
+
+export default Footer;
