@@ -124,7 +124,15 @@ function Header() {
                     <Button color='inherit' onClick={handleArea}>
                       AREA
                     </Button>
-                    <Button color='inherit'>Category</Button>
+                    <Link
+                      to='/categories'
+                      reloadDocument={true}
+                      style={{
+                        color: 'white',
+                      }}
+                    >
+                      <Button color='inherit'>Category</Button>
+                    </Link>
                     <Button color='inherit'>Login</Button>
                     <Button color='inherit'>Register</Button>
                   </>

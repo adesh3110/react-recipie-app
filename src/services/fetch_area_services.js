@@ -3,6 +3,7 @@ async function fetchAreasService() {
   const data = await fetch(url);
   const json = await data.json();
   const area = json['meals'];
+  // console.log(area);
   return area;
 }
 

@@ -55,7 +55,7 @@ function HeroSection() {
 
         <Box width='100%' marginTop='10px'>
           <Grid container>
-            <Grid item xs={12} sm={8}>
+            <Grid item xs={8}>
               <Autocomplete
                 disablePortal
                 id='combo-box-demo'
@@ -94,7 +94,7 @@ function HeroSection() {
                 renderInput={(params) => <TextField {...params} label='Meal' />}
               />
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={4}>
               <Button
                 onClick={() => navigation(`/search?q=${input}`)}
                 color='secondary'
@@ -107,7 +107,7 @@ function HeroSection() {
                   color: '#1876d2',
                 }}
               >
-                Seach
+                Search
               </Button>
             </Grid>
           </Grid>

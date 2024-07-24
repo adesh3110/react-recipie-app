@@ -5,7 +5,7 @@ import LoadingRecipe from '../components/recipe_details/loading_recipe';
 import NoDataPage from './NoDataPage';
 
 function RandomRecipie() {
-  const [randonRecipie, setRandomRecipie] = useState({});
+  const [randomRecipie, setRandomRecipie] = useState({});
 
   useEffect(() => {
     fetchRandomRecipie();
@@ -16,12 +16,12 @@ function RandomRecipie() {
     setRandomRecipie(data);
   };
 
-  if (randonRecipie == null) {
+  if (randomRecipie == null) {
     return <NoDataPage />;
-  } else if (randonRecipie.strMeal == null) {
+  } else if (randomRecipie.strMeal == null) {
     return <LoadingRecipe />;
   } else {
-    return <RecipieDetaidCard data={randonRecipie} />;
+    return <RecipieDetaidCard data={randomRecipie} />;
   }
 }
 

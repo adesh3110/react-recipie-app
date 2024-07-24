@@ -4,6 +4,7 @@ import fetchRecipieByArea from '../services/fetch_recipie_by_area';
 import { useParams } from 'react-router-dom';
 import fetchRecipieById from '../services/fetch_recipie_by_id';
 import RecipeCard from '../components/common/recipe_card';
+import LoadingRecipe from '../components/recipe_details/loading_recipe';
 
 function SearchByArea() {
   const [recipiesByArea, setRecipiesByArea] = useState([]);
@@ -23,20 +24,28 @@ function SearchByArea() {
     setRecipiesByArea(updateData);
   };
 
-  return (
-    <Container
-      sx={{
-        my: 2,
-      }}
-    >
-      <Grid container rowSpacing={4} columnSpacing={4}>
+  const l = recipiesByArea.length;
+  if (l < 1) {
+    return <LoadingRecipe />;
+  } else {
+    return (
+      <>
         {recipiesByArea.map((e, i) => {
-          // return <RecipieByArea e={e} />;
-          return <RecipeCard key={i} meal={e} />;
+          return (
+            <Container
+              sx={{
+                my: 2,
+              }}
+            >
+              <Grid container rowSpacing={4} columnSpacing={4}>
+                {<RecipeCard key={i} meal={e} />}
+              </Grid>
+            </Container>
+          );
         })}
-      </Grid>
-    </Container>
-  );
+      </>
+    );
+  }
 }
 
 export default SearchByArea;

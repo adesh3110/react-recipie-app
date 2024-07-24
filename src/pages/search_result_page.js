@@ -24,7 +24,7 @@ function SearchResultPage() {
 
   return (
     <Container>
-      <Box my={4}>
+      <Box py={4}>
         <h1>Showing Result for "{query}"</h1>
         {meals.map((meal) => {
           return <RecipeCard meal={meal} key={meal.idMeal} />;
