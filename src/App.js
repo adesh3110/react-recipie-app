@@ -8,6 +8,7 @@ import SearchByArea from './pages/SearchByArea';
 import HomeLayout from './layouts/home_layout';
 import Areas from './pages/Areas';
 import Categories from './pages/Categories';
+import SearchByCategory from './pages/SearchByCategory';
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
           <Route path='/area/:area' element={<SearchByArea />} />
           <Route path='/area' element={<Areas />} />
           <Route path='/categories' element={<Categories />} />
+          <Route
+            path='/categories/:categories'
+            element={<SearchByCategory />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
