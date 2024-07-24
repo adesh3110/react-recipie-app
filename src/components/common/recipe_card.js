@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function RecipeCard({ meal }) {
   return (
-    <Box my={4} component={Paper} elevation={2} width='100%'>
+    <Box mt={4} component={Paper} elevation={2} width='100%'>
       <Grid container>
         <Grid item md={5} width='100%'>
           <Box height='300px'>
@@ -15,7 +15,8 @@ function RecipeCard({ meal }) {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
-                borderRadius: '8px',
+                borderTopLeftRadius: '4px',
+                borderBottomLeftRadius: '4px',
               }}
               alt={meal.idMeal}
             />

@@ -32,12 +32,8 @@ function SearchByArea() {
       <>
         {recipiesByArea.map((e, i) => {
           return (
-            <Container
-              sx={{
-                my: 2,
-              }}
-            >
-              <Grid container rowSpacing={4} columnSpacing={4}>
+            <Container>
+              <Grid container rowSpacing={4} columnSpacing={4} py={2}>
                 {<RecipeCard key={i} meal={e} />}
               </Grid>
             </Container>
