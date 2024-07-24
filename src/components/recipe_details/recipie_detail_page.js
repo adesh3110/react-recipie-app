@@ -41,6 +41,14 @@ function RecipieDetaidCard({ data }) {
           <Typography variant='body1' gutterBottom my={2}>
             {data.strInstructions}
           </Typography>
+          <Typography
+            variant='h4'
+            gutterBottom
+            my={2}
+            sx={{ textDecoration: 'underline' }}
+          >
+            YouTube Video
+          </Typography>
           <LiteYouTubeEmbed
             id={ytId}
             title='What’s new in Material Design for the web (Chrome Dev Summit 2019)'

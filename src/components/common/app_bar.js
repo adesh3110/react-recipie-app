@@ -133,8 +133,8 @@ function Header() {
                     >
                       <Button color='inherit'>Category</Button>
                     </Link>
-                    <Button color='inherit'>Login</Button>
-                    <Button color='inherit'>Register</Button>
+                    {/* <Button color='inherit'>Login</Button>
+                    <Button color='inherit'>Register</Button> */}
                   </>
                 )}
               </Toolbar>
