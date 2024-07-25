@@ -1,17 +1,17 @@
 import React from 'react';
 import { Box } from '@mui/system';
 import { Button, Container, Grid, Typography } from '@mui/material';
-import img1 from '../../assets/Salad.avif';
+import French from '../../assets/French.webp';
 import { Link } from 'react-router-dom';
 
-function SectionOne() {
+function SectionThree() {
   return (
     <Container>
       <Box my={4} style={{ background: 'red' }}>
         <Grid container>
           <Grid item xs={12} md={5}>
             <img
-              src={img1}
+              src={French}
               style={{
                 width: '100%',
                 height: '100%',
@@ -32,20 +32,21 @@ function SectionOne() {
           >
             <Box>
               <Typography variant='h4' color='text.secondary'>
-                Start Your Diet with Salad
+                Inviting your French freind for Match..?
+              </Typography>
+              <Typography variant='h4' color='text.secondary'>
+                We got your back.
               </Typography>
               <Typography variant='body1' color='text.secondary' my={4}>
-                Salads offer numerous health benefits, making them a valuable
-                addition to any diet. They are nutrient-rich, providing
-                essential vitamins, minerals, and antioxidants that support
-                overall health and help prevent diseases. High in fiber, salads
-                aid digestion and assist in maintaining a healthy weight. They
-                are also low in calories yet filling, making them ideal for
-                weight management.
+                Knowledge of French cooking has contributed significantly to
+                Western cuisines. Its criteria are used widely in Western
+                cookery school boards and culinary education. In November 2010,
+                French gastronomy was added by the UNESCO to its lists of the
+                world's "intangible cultural heritage".
               </Typography>
-              <Link to={`/search?q=Salad`}>
+              <Link to={`/area/French`}>
                 <Button variant='contained' style={{ marginTop: '16px' }}>
-                  Let's Make Salad
+                  Let's Surprise them.
                 </Button>
               </Link>
             </Box>
@@ -56,4 +57,4 @@ function SectionOne() {
   );
 }
 
-export default SectionOne;
+export default SectionThree;

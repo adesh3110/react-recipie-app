@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box } from '@mui/system';
 import { Button, Container, Grid, Typography } from '@mui/material';
-import chicken from '../../assets/Chicken.webp';
+import side from '../../assets/Side.avif';
 import { Link } from 'react-router-dom';
 
-function SectionTwo() {
+function SectionFour() {
   return (
     <Container>
       <Box my={4} style={{ background: 'red' }}>
@@ -19,19 +19,19 @@ function SectionTwo() {
           >
             <Box>
               <Typography variant='h4' color='text.secondary'>
-                Want to have Deliciuos Dinner ..?
+                Lets make Side for your Main Course
               </Typography>
               <Typography variant='body1' color='text.secondary' my={4}>
-                Chicken as a meat has been depicted in Babylonian carvings from
-                around 600 BC. Chicken was one of the most common meats
-                available in the Middle Ages. It was eaten over most of the
-                Eastern hemisphere and several different numbers and kinds of
-                chicken such as capons, pullets, and hens were eaten. Chicken
-                has good source of lean protien and is very nutrional.
+                Side dishes such as salad, potatoes and bread are commonly used
+                with main courses throughout many countries of the western
+                world. Rice and couscous have grown to be quite popular
+                throughout Europe, especially at formal occasions (with couscous
+                appearing more commonly at dinner parties with Middle Eastern
+                dishes).
               </Typography>
-              <Link to={`/search?q=Chicken`}>
+              <Link to={`/categories/Side`}>
                 <Button variant='contained' style={{ marginTop: '16px' }}>
-                  Let's Make Chicken
+                  Let's Make Sides
                 </Button>
               </Link>
             </Box>
@@ -39,7 +39,7 @@ function SectionTwo() {
 
           <Grid item xs={12} md={5}>
             <img
-              src={chicken}
+              src={side}
               style={{
                 width: '100%',
                 height: '100%',
@@ -55,4 +55,4 @@ function SectionTwo() {
   );
 }
 
-export default SectionTwo;
+export default SectionFour;
