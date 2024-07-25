@@ -92,14 +92,18 @@ function Header() {
                           <Button>RANDOM</Button>
                         </Link>
                       </MenuItem>
-                      <MenuItem onClick={handleArea}>AREA</MenuItem>
-                      <MenuItem onClick={handleMobileMenuClose}>
-                        Category
+                      <MenuItem onClick={handleArea}>
+                        <Button>Area</Button>
                       </MenuItem>
-                      <MenuItem onClick={handleMobileMenuClose}>Login</MenuItem>
+                      <MenuItem onClick={handleMobileMenuClose}>
+                        <Link to='/categories' reloadDocument={true}>
+                          <Button>Category</Button>
+                        </Link>
+                      </MenuItem>
+                      {/* <MenuItem onClick={handleMobileMenuClose}>Login</MenuItem>
                       <MenuItem onClick={handleMobileMenuClose}>
                         Register
-                      </MenuItem>
+                      </MenuItem> */}
                     </Menu>
                   </>
                 ) : (

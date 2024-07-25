@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function SectionThree() {
   return (
     <Container>
-      <Box my={4} style={{ background: 'red' }}>
+      <Box my={4} style={{ background: '#efefef' }}>
         <Grid container>
           <Grid item xs={12} md={5}>
             <img
